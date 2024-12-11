@@ -1,0 +1,7 @@
+services:
+  ruby:
+    build: .
+    container_name: algorithm_challenges
+    tty: true
+    volumes:
+      - ./algorithm_challenges:/algorithm_challenges
