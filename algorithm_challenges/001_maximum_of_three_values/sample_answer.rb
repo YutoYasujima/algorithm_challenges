@@ -13,9 +13,17 @@ end
 
 # 不要なメソッド
 def all_integer?(array)
-  array.all? { |element| element.is_a?(Integer)}
+  array.all? { |element| element.is_a?(Integer) }
 end
 
 ### 解答例解説 ###
 # 配列の各要素の値を比較し、大きい値を「max」に代入しています。
 # 最後に戻り値として「max」を返しています。
+
+### 別解 ###
+# アルゴリズムを考えるという意味では不適当かもしれませんが、下記の解答例もあります。
+# 「sort」メソッドにより昇順に並び替えた後に、一番最後の要素を返しています。
+
+# def maximum_of_three_values(numbers)
+#   numbers.sort[-1]
+# end
