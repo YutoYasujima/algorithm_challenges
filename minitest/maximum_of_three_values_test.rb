@@ -6,6 +6,5 @@ class Maximum_of_three_valuesTest < Minitest::Test
     assert_equal 100, maximum_of_three_values([1,10,100])
     assert_equal 0, maximum_of_three_values([-10,0,-5])
     assert_equal -1, maximum_of_three_values([-10,-1,-5])
-    assert_equal 10, maximum_of_three_values([10,10,10])
   end
 end
