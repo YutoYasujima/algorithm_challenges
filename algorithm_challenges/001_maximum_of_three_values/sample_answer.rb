@@ -13,7 +13,7 @@ end
 
 # 不要なメソッド
 def all_integer?(array)
-  array.all? { |element| element.is_a?(Integer)}
+  array.all? { |element| element.is_a?(Integer) }
 end
 
 ### 解答例解説 ###

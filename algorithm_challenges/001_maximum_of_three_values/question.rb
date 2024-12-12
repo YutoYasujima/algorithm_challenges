@@ -7,7 +7,6 @@
 
 # 注意点：
 # Arrayクラスの「max」メソッドは使用しないでください。
-# アルゴリズム問題のため、便利なメソッドは使用しないようにしてください。
 
 def maximum_of_three_values(numbers)
 
