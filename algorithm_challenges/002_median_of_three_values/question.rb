@@ -15,4 +15,10 @@ def median_of_three_values(numbers)
 
 end
 
+### 実装確認 ###
+# 下記のコメントアウトを解除すると確認できます。
+# 下記全体を選択した状態で下記のキーを押下すると解除できます。
+#    Windows/Linux：[Ctrl] + [/]
+#    macOS：[Command] + [/]
+
 # puts median_of_three_values([1, 2, 3])
