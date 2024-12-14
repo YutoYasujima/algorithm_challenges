@@ -1,8 +1,7 @@
 def maximum_of_three_values(numbers)
   # 以下、解答例
   max = numbers[0]
-  max = numbers[1] if max < numbers[1]
-  max = numbers[2] if max < numbers[2]
+  numbers.each { |number| max = number if max < number }
   max
 end
 
