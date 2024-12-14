@@ -10,7 +10,7 @@
 #                          ]
 
 # 条件：
-# 特になし。
+# 特にありません。
 
 def isosceles_triangle(length)
 
@@ -18,9 +18,11 @@ end
 
 ### 実装確認 ###
 # 下記のコメントアウトを解除すると確認できます。
-# 該当箇所全体を選択した状態でキーを押下するとコメントアウトを解除できます。
+# VSCodeエディタでは、該当箇所を選択した状態でキーを押下すると
+# コメントアウト/コメントアウト解除ができます。
 #    Windows/Linux：[Ctrl] + [/]
 #    macOS：[Command] + [/]
+# テスト実行前にはコメントアウトしてください。
 
 # length = 3
 # triangle_array = isosceles_triangle(length)
@@ -38,8 +40,8 @@ end
 #   **
 #   ***
 
-# length = 3
-# triangle_array = isosceles_triangle(length)
+# length1 = 3
+# triangle_array = isosceles_triangle(length1)
 # triangle_array.each do |line_array|
 #   line_array.each do |value|
 #     if value == 1

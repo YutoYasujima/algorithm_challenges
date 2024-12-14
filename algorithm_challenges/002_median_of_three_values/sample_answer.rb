@@ -1,9 +1,4 @@
 def median_of_three_values(numbers)
-  # 引数チェック(不要)
-  return unless numbers.is_a?(Array)
-  return unless numbers.size == 3
-  return unless all_integer?(numbers)
-
   # 以下、解答例
   # 見づらいため変数に代入
   a = numbers[0]
@@ -24,11 +19,6 @@ def median_of_three_values(numbers)
   else
     b
   end
-end
-
-# 不要なメソッド
-def all_integer?(array)
-  array.all? { |element| element.is_a?(Integer) }
 end
 
 ### 解答例解説 ###
