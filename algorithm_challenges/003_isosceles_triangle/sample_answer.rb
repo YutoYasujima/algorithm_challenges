@@ -1,7 +1,4 @@
 def isosceles_triangle(length)
-  # 引数チェック(不要)
-  return unless numbers.is_a?(Integer)
-
   # 以下、解答例
   triangle_array = []
   length.times do |row|
