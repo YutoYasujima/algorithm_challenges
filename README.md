@@ -1,3 +1,6 @@
+## アプリについて
+- このアプリはアルゴリズム勉強用アプリです。言語は"Ruby"を使用することを前提としています。
+
 ## README.mdについて
 - VSCodeエディタを使用している場合は、ビューワーで見ていただけるとキレイに見れます。
 [v]キーは単独で押下してください。
@@ -34,3 +37,6 @@ docker compose run --rm ruby ruby ./algorithm_challenges/xxxx/question.rb
 docker compose run --rm ruby ruby ./minitest/xxxx_test.rb
 ```
  - sample_answer.rbに解答例が記載されています（もっと効率の良い書き方があるかもしれません）。
+
+ ## 問題一覧
+ - 問題の一覧は「questions_list.md」をご覧ください。
