@@ -49,34 +49,7 @@
 # 「あまり 15」の「15」はアルファベットで「F」と表現します。
 
 def base_conversion(number, base)
-  reverse_number_array = []
-  while number >= base
-    reverse_number_array << number % base
-    number /= base
-  end
-  reverse_number_array << number
-  number_to_alphabet_in_array(reverse_number_array).reverse.join
-end
 
-def number_to_alphabet_in_array(numbers)
-  numbers.map do |number|
-    case number
-    when 10
-      'A'
-    when 11
-      'B'
-    when 12
-      'C'
-    when 13
-      'D'
-    when 14
-      'E'
-    when 15
-      'F'
-    else
-      number
-    end
-  end
 end
 
 ### 実装確認 ###

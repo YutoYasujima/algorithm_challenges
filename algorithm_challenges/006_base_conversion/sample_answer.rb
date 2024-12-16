@@ -52,3 +52,64 @@ end
 # Arrayクラスの「join」メソッドで配列の各要素を結合して文字列に変換しています。
 
 ### 別解 ###
+# def base_conversion(number, base)
+#   return number_to_alphabet(number) if number < base
+#   base_conversion(number / base, base) + number_to_alphabet(number % base)
+# end
+#
+# def number_to_alphabet(number)
+#   if (10..15).include?(number)
+#     (number - 10 + 65).chr
+#   else
+#     number.to_s
+#   end
+# end
+#
+# 再帰関数でやってみました。
+# 「再帰関数」とは自分自身を呼び出す関数(メソッド)です。
+# 必ず終わりの条件を設定する必要があります。
+# 繰り返し処理で書き換えることが可能なので、あまり実用的では無いかもしれません。
+# 解答例では配列を使用しましたが、今回は文字列を基本として定義しました。
+#
+# 「return number_to_alphabet(number) if number < base」が再帰関数の終わりの条件になります。
+# 「base_conversion(10, 2)」で再帰関数の流れを解説します。
+#   No.1：
+#     number = 10 => 「number < base」はfalse
+#     2行目の「base_conversion(10 / 2, 2)」呼出
+#     「base_conversion」の処理はまだ終わっていない
+#
+#     No.2：
+#       number = 5 => 「number < base」はfalse
+#       2行目の「base_conversion(5 / 2, 2)」呼出
+#       「base_conversion」の処理はまだ終わっていない
+#
+#       No.3：
+#         number = 2 => 「number < base」はfalse
+#         2行目の「base_conversion(2 / 2, 2)」呼出
+#         「base_conversion」の処理はまだ終わっていない
+#
+#         No.4：
+#           number = 1 => 「number < base」はtrue
+#           「return number_to_alphabet(1)」で「'1'」をNo.3に返す
+#
+#       No.3に戻る：
+#         「'1' + number_to_alphabet(2 % 2)」で'10'をNo.2に返す
+#
+#     No.2に戻る：
+#       「'10' + number_to_alphabet(5 % 2)」で'101'をNo.1に返す
+#
+#   No.1に戻る：
+#     「'101' + number_to_alphabet(10 % 2)」で'1010'を返し終了
+#
+# 「number_to_alphabet」メソッドの中の「(number - 10 + 65).chr」の部分を解説します。
+# 文字には文字コードという番号が当てられています。
+#   'A'なら「65」、'B'なら「66」、'C'なら「67」...
+# ただし、文字コードには「Unicode」や「ASCII」などの種類があるので、
+# 常に『'A'なら「65」』とは言い切れません。
+#   ※「文字コード」という言葉は、「文字に当てられた番号」、「文字に番号を当てた体系的な仕組み」
+#     の両方の意味で使われると思われます。
+#
+# 上記のコードでは、「10」という数値を'A'(文字コード「65」)に変換するために、
+# 「(number - 10 + 65).chr」としています。Integerクラスの「chr」メソッドは
+# 文字コードを文字に変換するメソッドです。
+# これにより、「10～15」の数値を「A～F」のアルファベットに変換しています。
