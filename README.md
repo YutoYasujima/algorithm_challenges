@@ -36,7 +36,14 @@ docker compose run --rm ruby ruby ./algorithm_challenges/xxxx/question.rb
 ```
 docker compose run --rm ruby ruby ./minitest/xxxx_test.rb
 ```
- - sample_answer.rbに解答例が記載されています（もっと効率の良い書き方があるかもしれません）。
+ - sample_answer.rbに解答例が記載されています（もっと効率の良い書き方があると思いますので、トライしてみてください！）。
+
+ ## 最新問題の取得
+ - できる限り定期的に問題は更新していくつもりです。下記のコマンドを実行して、
+リモートリポジトリから最新のソースを取得していただけます。
+```
+git pull origin main
+```
 
  ## 問題一覧
  - 問題の一覧は「questions_list.md」をご覧ください。
