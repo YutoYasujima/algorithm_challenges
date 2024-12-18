@@ -3,11 +3,13 @@
 
 ## README.mdについて
 - VSCodeエディタを使用している場合は、ビューワーで見ていただけるとキレイに見れます。
-[v]キーは単独で押下してください。
+今ご覧になってるREADME.mdファイル上の適当な場所でクリックをし、
+下記のキーを押下してください。[v]キーは単独で押下してください。
   - Windows/Linux：[Ctrl] + [k] => [v]
   - macOS：[Command] + [k] => [v]
 
 ## 環境構築
+ - 「Docker Desktop」アプリを起動してください。
  - 「Dockerfile」のあるディレクトリまで移動し、下記のコマンドを実行してください。
  ```
  docker compose build
