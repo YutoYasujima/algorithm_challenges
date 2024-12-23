@@ -43,7 +43,7 @@ docker compose run --rm ruby ruby ./minitest/xxxx_test.rb
 ```
  - テストが上手くいかない場合、「minitest」フォルダの該当ファイルを確認し、
    どのテストケースで失敗したのかを確認しましょう！
-   上記のテスト用コマンド実行時に、失敗した行番号が出てくるので確認してください。下記の「./minitest/array_length_test.rb:6]」の「6」が行番号になります。
+   上記のテスト用コマンド実行時に、失敗した行番号が出てくるので確認してください。下記の「./minitest/array_length_test.rb:6」の「6」が行番号になります。
 
    - 1) Failure:
 
