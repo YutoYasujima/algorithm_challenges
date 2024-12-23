@@ -1,7 +1,11 @@
 def maximum_of_three_values(numbers)
   # 以下、解答例
   max = numbers[0]
-  numbers.each { |number| max = number if max < number }
+  number.each do |number|
+    if max < number
+      max = number
+    end
+  end
   max
 end
 
@@ -9,7 +13,17 @@ end
 # 配列の各要素の値を比較し、大きい値を「max」に代入しています。
 # 最後に戻り値として「max」を返しています。
 
-### 別解 ###
+### 別解1 ###
+# 解答例の「each」メソッドの部分は、Rubyだと下記のように
+# ワンライナー(１行)で書くことができます。
+#
+#   def maximum_of_three_values(numbers)
+#     max = numbers[0]
+#     numbers.each { |number| max = number if max < number }
+#     max
+#   end
+
+### 別解2 ###
 # アルゴリズムを考えるという意味では不適当かもしれませんが、下記の解答例もあります。
 # 「sort」メソッドにより昇順に並び替えた後に、一番最後の要素を返しています。
 
