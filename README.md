@@ -39,7 +39,18 @@ docker compose run --rm ruby ruby ./algorithm_challenges/xxxx/question.rb
 ```
 docker compose run --rm ruby ruby ./minitest/xxxx_test.rb
 ```
- - sample_answer.rbに解答例が記載されています（もっと効率の良い書き方があると思いますので、トライしてみてください！）。
+ - テストが上手くいかない場合、「minitest」フォルダの該当ファイルを確認し、
+   どのテストケースで失敗したのかを確認しましょう！
+   上記のテスト用コマンド実行時に、失敗した行番号が出てくるので確認してください。下記の「./minitest/array_length_test.rb:6]」の「6」が行番号になります。
+
+   - 1) Failure:
+
+        ArrayLengthTest#test_array_length [./minitest/array_length_test.rb:6]:
+
+        Expected: 0
+
+        Actual: nil
+ - 「sample_answer.rb」に解答例が記載されています（もっと効率の良い書き方があると思いますので、トライしてみてください！）。
 
  ## 最新問題の取得
  - できる限り定期的に問題は更新していくつもりです。下記のコマンドを実行して、
