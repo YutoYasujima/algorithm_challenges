@@ -39,23 +39,24 @@ end
 # 以上の処理で「1～1000」までの素数を取得できますが、効率の良い処理ではありません。
 # 下記のように定義して、計算回数「count」を見ると「number % n」の計算が78,022回も
 # 行われていることが分かります。
-# 　　def primes_up_to_1000
-# 　　  primes_array = []
-# 　　  count = 0
-# 　　  (2..1000).each do |number|
-# 　　    is_not_prime = false
-# 　　    (2...number).each do |n|
-# 　　      count += 1
-# 　　      if number % n == 0
-# 　　        is_not_prime = true
-# 　　        break
-# 　　      end
-# 　　    end
-# 　　    primes_array << number unless is_not_prime
-# 　　  end
-# 　　  puts "計算回数：#{count}回"
-# 　　  primes_array
-# 　　end
+#
+#   def primes_up_to_1000
+#     primes_array = []
+#     count = 0
+#     (2..1000).each do |number|
+#       is_not_prime = false
+#       (2...number).each do |n|
+#         count += 1
+#         if number % n == 0
+#           is_not_prime = true
+#           break
+#         end
+#       end
+#       primes_array << number unless is_not_prime
+#     end
+#     puts "計算回数：#{count}回"
+#     primes_array
+#   end
 
 # 解答例2：
 # 無駄な繰り返し処理を削減します。
@@ -144,6 +145,7 @@ end
 # 計算は「number % primes_array[index]」「primes_array[index] * primes_array[index]」
 # の２か所で行われています。
 # 計算回数を求めるには、下記のようにメソッドを修正します。
+#
 #   def primes_up_to_1000
 #     primes_array = [2, 3]
 #     count = 0
@@ -168,7 +170,7 @@ end
 
 ### 備考 ###
 # 引数に正の整数を渡して素数かどうか判定するメソッドは、
-# 下記のように定義できるようです。
+# Rubyなら下記のように定義できるようです。
 #   def prime?(number)
 #     return false if number <= 1
 #     (2..Math.sqrt(number)).none? { |i| number % i == 0 }
