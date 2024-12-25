@@ -67,3 +67,52 @@ end
 # def median_of_three_values(numbers)
 #   numbers.sort[numbers.length / 2]
 # end
+
+### 発展問題解答例 ###
+#
+#   def median_of_three_values_advanced(array)
+#     return nil if array.length == 0
+#     uniq_sorted_array = array.dup.uniq.sort
+#     center_index = uniq_sorted_array.size / 2
+#     if uniq_sorted_array.size % 2 == 0
+#       (uniq_sorted_array[center_index] + uniq_sorted_array[center_index - 1]) / 2.0
+#     else
+#       uniq_sorted_array[center_index]
+#     end
+#   end
+#
+
+### 解答例解説 ###
+# まずは配列が空だった場合に「nil」を返しています。
+#
+# 特に条件には指定されていませんが、引数「array」を破壊(配列の要素を変えてしまうこと)
+# しないようにします。
+#「uniq_sorted_array = array.dup.uniq.sort」」は「dup」メソッドで「array」の
+# コピーを作成しています。「uniq」メソッドで配列内の同じ値を１つにまとめています。
+# 「sort」メソッドで昇順に並び変えています。
+#
+#   [3, 1, 2, 2, 3, 2].uniq => [3, 1, 2]
+#   [3, 1, 2].sort => [1, 2, 3]
+#
+# もしコピーして、ユニーク化して、並び変えた後の配列の要素数が奇数なら、
+# 真ん中の要素が中央値となります。
+#
+#   uniq_sorted_array = [1, 2, 3, 4, 5]
+#   center_index = uniq_sorted_array.size / 2 => 「2」
+#     ※「整数 / 整数」なら商(割り算の結果)の小数部分が切り捨てられます。
+#   uniq_sorted_array[2] => 中央値は「3」
+#
+# 要素数が偶数だった場合は、真ん中の２つの値の平均値を取ります。
+#
+#   uniq_sorted_array = [2, 3, 4, 5]
+#   center_index = uniq_sorted_array.size / 2 => 「2」
+#
+#   「uniq_sorted_array[2]」と、そのひとつ前の要素「uniq_sorted_array[2 - 1]」の平均
+#   (uniq_sorted_array[2] + uniq_sorted_array[2 - 1]) / 2.0
+#     ※「2.0」で割っている理由は、割り算のどちらかが小数であれば、結果も小数になるからです。
+#       Ruby以外の言語でも同じような性質があったりします。
+#   「(3 + 4) / 2.0」 => 中央値は「3.5」
+#
+# もっと厳密にやるのであれば、「uniq」メソッドや「sort」メソッドも自作する必要が
+# あるかもしれませんし、戻り値を「小数第１位まで」とかにできると思いますが、
+# ここではそこまでやりません。
