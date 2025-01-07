@@ -4,12 +4,12 @@ def binary_search(array, value)
   pr = array.size - 1
   while pl <= pr
     pc = (pl + pr) / 2
-    if array[pc] > value
-      pr = pc - 1
-    elsif array[pc] < value
-      pl = pc + 1
-    else
+    if array[pc] == value
       return pc
+    elsif array[pc] > value
+      pr = pc - 1
+    else
+      pl = pc + 1
     end
   end
   -1
@@ -33,12 +33,12 @@ end
 #     pr = array.size - 1
 #     begin
 #       pc = (pl + pr) / 2
-#       if array[pc] > value
-#         pr = pc - 1
-#       elsif array[pc] < value
-#         pl = pc + 1
-#       else
+#       if array[pc] == value
 #         return pc
+#       elsif array[pc] > value
+#         pr = pc - 1
+#       else
+#         pl = pc + 1
 #       end
 #     end while pl <= pr
 #     -1
