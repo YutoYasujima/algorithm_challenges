@@ -26,3 +26,4 @@
  |017|(単純な)線形探索|★☆☆☆☆|017_simple_linear_search|2024/12/25|
  |018|テストの得点分布|★★★☆☆|018_test_score_distribution|2024/12/26|
  |019|三次元配列入門|★★★☆☆|019_three_dimensional_array|2024/12/27|
+ |020|２分探索|★★★☆☆|020_binary_search|2025/01/07|
